@@ -1,0 +1,43 @@
+{
+  "name": "ims-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run tsc -- && npm run copypublicdir",
+    "buildandrun": "npm run build && npm start",
+    "start": "node .",
+    "tsc": "tsc",
+    "copypublicdir": "npm run copyfiles 'public/**' 'dist/'",
+    "copyfiles": "copyfiles"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cors": "^2.8.4",
+    "@types/dotenv": "^6.1.0",
+    "@types/express": "^4.16.1",
+    "@types/express-jwt": "0.0.41",
+    "@types/jsonwebtoken": "^8.3.0",
+    "@types/moment": "^2.13.0",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^11.10.4",
+    "@types/web3": "^1.0.18",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "copyfiles": "^2.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-jwt": "^5.3.1",
+    "express-request-id": "^1.4.1",
+    "jsonwebtoken": "^8.5.0",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "truffle-contract": "^4.0.7",
+    "web3": "^1.0.0-beta.37",
+    "winston": "^3.2.1"
+  }
+}

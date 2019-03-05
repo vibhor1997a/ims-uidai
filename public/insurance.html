@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Insurance</title>
+</head>
+
+<body>
+  <h1 style="color: blue;text-align: center;">Welcome To Motor Insurance</h1>
+  <style>
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active {
+      background-color: #717171;
+    }
+
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    input[type=text] {
+      width: 20%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid red;
+      border-radius: 4px;
+    }
+  </style>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="life1.jpg" align="center"
+        style="width: 60%;height: 300px; margin-left: auto;margin-right: auto;display: block; ">
+
+    </div>
+
+    <div class="mySlides fade">
+      <img src="life2.jpeg" align="center"
+        style="width: 30%;height: 300px; margin-left: auto;margin-right: auto;display: block; ">
+
+    </div>
+
+    <div class="mySlides fade">
+      <img src="life3.jpg" align="center"
+        style="width: 70%;height: 300px; margin-left: auto;margin-right: auto;display: block; ">
+
+    </div>
+
+  </div>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <h2 style="text-align: center;">Enter your details here:</h2>
+
+
+  <!--*****************************************FORM STARTS HERE************************************************************************-->
+
+  <form style="text-align: center;" id="frm">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="fname">
+    <br>
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lname">
+    <br>
+    <label for="username">UIDAI ID</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="uid" name="uid">
+
+    <br>
+    Is age greater than 18?
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="checkbox" name="agree" id="agree"> I agree<br>
+    <br>
+    Select Type Of vehicle
+    <br>
+    <input type="radio" id="two_wheeler" name="vehicle" value="two_wheeler" checked> Two Wheeler<br>
+    <input type="radio" id="four_wheeler" name="vehicle" value="four_wheeler"> Four Wheeler<br>
+
+    <br>
+    Select Your Package &nbsp;&nbsp;
+    <select name="plan">
+      <option value="one">1 Yr Package at Rs 1000</option>
+      <option value="two">2 Yr Package at Rs 2000</option>
+      <option value="three">3 Yr Package at Rs 3000</option>
+    </select>
+    <br>
+    <br>
+    <input style=" background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;" type="submit" name="Submit">
+
+
+  </form>
+
+  <!--*****************************************FORM STARTS HERE************************************************************************-->
+
+
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 3000); // Change image every 2 seconds
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/insurance.js"></script>
+
+</body>
+
+</html>
