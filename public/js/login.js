@@ -24,7 +24,7 @@ $(document).ready(() => {
         e.preventDefault();
         const username = $('#uname').val().trim();
         const password = $('#password').val().trim();
-        $.ajax('http://localhost:3001/api/v1.0/users/login', {
+        $.ajax('http://68.183.93.176/api/v1.0/users/login', {
             data: {
                 username, password
             },

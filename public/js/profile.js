@@ -9,7 +9,7 @@
 
 $(document).ready(() => {
     const token = localStorage.getItem('userToken');
-    $.ajax('http://localhost:3001/api/v1.0/users/me', {
+    $.ajax('http://68.183.93.176/api/v1.0/users/me', {
         headers: {
             Authorization: `Bearer ${localStorage.getItem('userToken')}`
         },

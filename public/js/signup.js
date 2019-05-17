@@ -68,7 +68,7 @@ $(document).ready(() => {
         const pincode = document.getElementById('pincode').value;
         const state = document.getElementById('state').value;
 
-        $.ajax('http://localhost:3001/api/v1.0/users/signup', {
+        $.ajax('http://68.183.93.176/api/v1.0/users/signup', {
             data: {
                 username,
                 password,

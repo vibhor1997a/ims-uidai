@@ -45,8 +45,6 @@ app.use(morgan(':date[iso] INFO REQUEST :id :remote-addr :method :url :status :r
     }
 }));
 
-app.use('/', express.static(path.join(__dirname, 'public')));
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors({ methods: ['GET', 'PUT', 'POST', 'DELETE', 'OPTIONS'] }));

@@ -7,7 +7,7 @@ $(document).ready(() => {
         else {
             const username = $('#uid').val().trim();
             console.log(username);
-            $.ajax('http://localhost:3001/api/v1.0/users/exists', {
+            $.ajax('http://68.183.93.176/api/v1.0/users/exists', {
                 data: {
                     username
                 },
@@ -18,7 +18,7 @@ $(document).ready(() => {
                         return;
                     }
                     else {
-                        $.ajax('http://localhost:3001/api/v1.0/users/isAdult', {
+                        $.ajax('http://68.183.93.176/api/v1.0/users/isAdult', {
                             data: {
                                 username
                             },
