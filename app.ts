@@ -31,6 +31,7 @@ app.use((req, res, next) => {
 });
 
 morgan.token('id', (req, res) => req.id);
+app.use(express.static(path.join(__dirname, 'public')));
 
 morgan.token('remote-addr', (req, res) =>
     stage === 'PROD' ? req.get('X-Forwarded-For') as string : req.ip);
