@@ -2,7 +2,8 @@
 
 ## LIVE DEMO
 
-
+You can find live demo at http://68.183.93.176/.
+For testing the 3rd party insurance application visit http://68.183.93.176/insurance.html
 
 ## Steps to Run
 
