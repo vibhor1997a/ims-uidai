@@ -1,15 +1,6 @@
-// (async () => {
-//     const contractInstance = await initialize();
-//     let data = await contractInstance.display_data.call(localStorage.getItem('username'));
-//     if (data) {
-//         data = JSON.parse(data);
-//         console.log(data);
-//     }
-// })().catch(err => console.log(err));
-
 $(document).ready(() => {
     const token = localStorage.getItem('userToken');
-    $.ajax('http://68.183.93.176/api/v1.0/users/me', {
+    $.ajax('/api/v1.0/users/me', {
         headers: {
             Authorization: `Bearer ${localStorage.getItem('userToken')}`
         },

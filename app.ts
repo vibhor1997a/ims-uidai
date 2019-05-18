@@ -30,6 +30,8 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 morgan.token('id', (req, res) => req.id);
 
 morgan.token('remote-addr', (req, res) =>
