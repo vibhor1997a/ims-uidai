@@ -7,35 +7,140 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <title>Login/Signup</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row" id="loginsignup">
-            <div class="m-1">
-                <a href="login.html" class="btn btn-primary">Login</a>
-            </div>
-            <div class="m-1">
-                <a href="signup.html" class="btn btn-primary">Signup</a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand ml-3" href="#">IMS</a>
+        <
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse row" id="navbarColor01">
+            <ul class="navbar-nav mr-auto col-md-12">
+            	<li class="nav-item col-md-2" style="max-width: 11%;">
+                    <a class="nav-link" href="#AboutUs"><i class="fa fa-user mr-1"></i>About Us</a>
+                </li>
+                <li class="nav-item col-md-2" style="max-width: 12%;">
+                    <a class="nav-link" href="#ContactUs"><i class="fa fa-handshake-o mr-1"></i>Contact Us<span class="sr-only">(current)</span></a>
+                </li>
+                <div class="col-md-6"></div>
+                
+                <li class="nav-item col-md-2" style="max-width: 10%;">
+                    <a class=" nav-link" data-toggle="modal" data-target="#AdminModal" style="cursor: pointer;"><i class="fa fa-user-plus mr-1"></i> Login</a>
+                </li>
+                <li class="nav-item col-md-2" style="max-width: 10%;">
+                    <a class=" nav-link" href="signup.html"><i class="fa fa-user-plus mr-1"></i>Signup</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="modal fade" tabindex="-1" id="AdminModal" data-keyboard="false" data-backdrop="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title"><i class="fa fa-user-plus"></i>Login</h3>
+                        <hr />
+                    </div>
+                    <div class="modal-body ">
+                         <form class="form-signin w-50">
+                             <input type="text" class="form-control form-control-sm m-2" id="uname" placeholder="username">
+                             <input type="password" class="form-control form-control-sm m-2" id="password" placeholder="password">
+                             <button type="submit" class="form-control m-2 btn btn-info btn-block">Login</button>
+                         </form>
+                        <div><p id="divopt"></p></div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="options text-center">
+                        	 <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="username">
-            <div class="row">
-                <h3 id="uname" class="text-success text-center"></h3>
-            </div>
-            <div class="row">
-                <a href="profile.html">Your Profile</a>
-            </div>
-            <div class="row">
-                <button class="float-right btn btn-primary" id="logout">Logout</button>
-            </div>
+    
+
+    	<div class="row front">
+    	   
+    	</div>
+
+    
+         <div class="row intro" id="AboutUs">
+          <div class="col-12">
+          	<h1>About Us</h1>
+          </div>
+        <div class="col-md-5 who">
+            <p class="outer">
+                <i id="f" class="fa fa-id-badge"></i>
+                WHO WE ARE?
+            </p>
+            <p class="inner">
+                We are the innovators who wants to provide you the best services.We offer a comprehensive career growth path. A variety of projects provide our developers with a challenging environment to grow professionally. We provide the opportunity to work on some of the cutting edge software application architectures, design based on the latest development tools.
+            </p>
+        </div>
+        <div class="col-md-5 who">
+            <p class="outer">
+                <i id="f" class="fa fa-trophy"></i>
+
+                WHY WE?
+            </p>
+            <p class="inner">
+                We not only privide you the best facility but also with great offers. We improve ourselves to provide you the best.We offer a comprehensive career growth path. A variety of projects provide our developers with a challenging environment to grow professionally. We provide the opportunity to work on some of the cutting edge software application architectures, design based on the latest development tools.
+            </p>
         </div>
     </div>
+<footer class="footer" id="ContactUs">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="./contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+		              121, Patparganj Road<br>
+		              Clear Water Bay, Patparganj<br>
+		              Delhi<br>
+		              <i class="fa fa-phone fa-lg"></i>  : +852 1234 5678<br>
+		              <i class="fa fa-fax fa-lg"></i>  : +852 8765 4321<br>
+		           </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a id="font" class="btn btn-social-icon btn-google fa-2x" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a id="font" class="btn btn-social-icon btn-facebook fa-2x" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a id="font" class="btn btn-social-icon btn-linkedin fa-2x" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a id="font" class="btn btn-social-icon btn-google fa-2x" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a id="font" class="btn btn-social-icon fa-2x" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright 2019 Identity Management System</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.0/js/bootstrap.min.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>

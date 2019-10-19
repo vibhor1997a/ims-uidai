@@ -1,0 +1,98 @@
+.front
+{
+height:700px;
+background-image:url(images/HomeImage.jpg);
+overflow:hidden;
+background-size:cover;
+background-repeat:no-repeat;
+position:relative;
+}
+
+.navbar
+{    
+background-color:#1a2849 !important;
+padding-top:10px;
+margin-bottom:0px;
+}
+
+.nav-item
+{
+	margin-left: 10px;
+}
+
+.intro
+{
+height:340px;
+padding-bottom:10px;
+padding-top:10px;
+background: linear-gradient(to top, #3c415e 0%, #1a2849 100%);}
+.who
+{
+color:floralwhite; 
+margin-left:5%;
+margin-right:20px;
+
+}
+.outer
+{
+padding-top:60px;
+text-align:center;
+}
+.inner
+{
+opacity:0;
+}
+.who:hover .inner
+{
+padding-top:5px;
+opacity:1;
+transition-duration:1s;
+text-align:center;
+
+}
+.who:hover .outer{    
+transition-duration:0.5s;
+padding-top:3px;
+}
+
+#f
+{
+padding: 5px;
+font-size: 60px;
+text-align: center;
+text-decoration: none;
+
+}
+.fa-id-badge
+{
+    color:lawngreen;
+}
+.fa-trophy
+{
+    color:indianred;
+}
+h1{
+	color: floralwhite;
+	text-align: center;
+}
+.footer{
+	background-color: #003f5c;
+	color: floralwhite;
+	height: 500px;
+	padding: 50px;
+}
+.fa-google-plus:hover{
+	color: #DD4B39;
+}
+.fa-facebook:hover{
+	color:#3b5998;
+}
+.fa-linkedin:hover{
+	color:#3b5998;
+}
+.fa-youtube:hover{
+	color:#DD4B39;
+}
+.fa-envelope-o:hover{
+	color:#B23121;
+}

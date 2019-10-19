@@ -11,7 +11,7 @@ $(document).ready(() => {
             success: (data) => {
                 console.log(data);
                 localStorage.setItem('userToken', data.data.accessToken);
-                location.href = '/';
+                location.href = '/dashboard.html';
             },
             error: err => {
                 alert(err.responseJSON.data.message);

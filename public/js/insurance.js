@@ -6,7 +6,7 @@ $(document).ready(() => {
         }
         else {
             const username = $('#uid').val().trim();
-            console.log(username);
+            const state = $('#state').val().trim();
             $.ajax('/api/v1.0/users/exists', {
                 data: {
                     username
@@ -18,21 +18,31 @@ $(document).ready(() => {
                         return;
                     }
                     else {
-                        $.ajax('/api/v1.0/users/isAdult', {
+                        $.ajax('/api/v1.0/users/me/organizations/validate', {
                             data: {
-                                username
+                                username,
+                                organizationName: 'Insurance Portal',
+                                state
                             },
                             method: 'post',
                             success: (res) => {
                                 if (!res.data.isAdult) {
-                                    alert(`You're under age to buy an insurance!`);
+                                    alert(`You're under age to buy an insurance.`);
+                                }
+                                else if (!res.data.isStateCorrect) {
+                                    alert(`You are not registered for this state.`);
                                 }
                                 else {
-                                    alert('Your request would be processed soon');
+                                    alert('Your request would be processed soon.');
                                 }
                             },
                             error: err => {
-                                alert(err.responseJSON.data.message);
+                                if (err.status == 403) {
+                                    alert("We don't have permissions to access the required information");
+                                }
+                                else{
+                                    alert("something went wrong, Please contact support");
+                                }
                             }
                         });
                     }

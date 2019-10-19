@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Signup</title>
+</head>
+
+<body>
+
+<div class="row">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand ml-3" href="#">IMS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse row" id="navbarColor01">
+            <ul class="navbar-nav mr-auto col-md-12">
+                <li class="nav-item col-md-2" style="max-width: 11%;">
+                    <a class="nav-link" href="index.html"><i class="fa fa-home mr-1"></i>Home</a>
+                </li>
+                <div class="col-md-8"></div>
+                
+                <li class="nav-item col-md-2" style="max-width: 10%;">
+                    <a class=" nav-link" data-toggle="modal" data-target="#AdminModal"><i class="fa fa-user-plus mr-1"></i> Login</a>
+                </li>
+                <li class="nav-item col-md-2" style="max-width: 10%;">
+                    <a class=" nav-link" href="#"><i class="fa fa-user-plus mr-1"></i>Signup</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</div>
+    <div class="container">
+        <h1 class="text-center text-success">Welcome to UIDAI</h1>
+        <div class="col-md-6 offset-md-4">
+            <form class="form-signin w-50" id="frm">
+            <h2>Registration Form</h2>
+            <input type="text" class="form-control m-2" id="uname" placeholder="username">
+            <input type="text" class="form-control m-2" id="firstName" placeholder="Firstname">
+            <input type="text" class="form-control m-2" id="lastName" placeholder="LastName">
+            <select class="form-control m-2" id="gender" placeholder="Gender">
+                <option value="male">Male</option>
+                <option value="female">FeMale</option>
+                <option value="others">Others</option>
+            </select>
+            <div class="form-group form-control m-2">
+                <label for="DOB">DOB:</label>
+                <input type="date" id="DOB">
+            </div>
+            <select id="sonOfOp" class="form-control m-2">
+                <option value="S/O">S/O</option>
+                <option value="D/O">D/O</option>
+                <option value="W/O">W/O</option>
+                <option value="C/O">C/O</option>
+            </select>
+            <input id="sonOfVal" type="text" class="form-control m-2">
+            <input type="text" class="form-control m-2" id="addressLine1" placeholder="address Line 1">
+            <input type="text" class="form-control m-2" id="addressLine2" placeholder="address Line 2">
+            <input type="text" class="form-control m-2" id="state" placeholder="State">
+            <input type="text" class="form-control m-2" id="pincode" placeholder="Pincode">
+            <!-- <div class="form-group m-2">
+                <label for="img">Upload Image</label>
+                <input type="file" id="img">
+            </div> -->
+            <input type="password" class="form-control m-2" id="password" placeholder="password">
+            <button type="submit" class="form-control m-2 btn btn-primary btn-block">Signup</button>
+        </form>
+
+        </div>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/signup.js"></script>
+</body>
+
+</html>

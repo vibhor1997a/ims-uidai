@@ -32,7 +32,7 @@ $(document).ready(() => {
             method: 'post',
             success: (res) => {
                 alert(res.data.message + '\nPlease login to continue');
-                location.href = '/login.html';
+                location.href = '/';
             },
             error: err => {
                 alert(err.responseJSON.data.message);

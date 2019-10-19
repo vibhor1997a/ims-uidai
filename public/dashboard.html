@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<title>Dashboard</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+		body {
+			overflow-x: hidden;
+			font-family: 'Roboto', sans-serif;
+			font-size: 16px;
+		}
+
+		/* Toggle Styles */
+
+		#viewport {
+			padding-left: 250px;
+			-webkit-transition: all 0.5s ease;
+			-moz-transition: all 0.5s ease;
+			-o-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+		}
+
+		#content {
+			width: 100%;
+			position: relative;
+			margin-right: 0;
+		}
+
+		/* Sidebar Styles */
+
+		#sidebar {
+			z-index: 1000;
+			position: fixed;
+			left: 250px;
+			width: 250px;
+			height: 100%;
+			margin-left: -250px;
+			overflow-y: auto;
+			background: #37474F;
+			-webkit-transition: all 0.5s ease;
+			-moz-transition: all 0.5s ease;
+			-o-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+		}
+
+		#sidebar header {
+			background-color: #263238;
+			font-size: 20px;
+			line-height: 52px;
+			text-align: center;
+		}
+
+		#sidebar header a {
+			color: #fff;
+			display: block;
+			text-decoration: none;
+		}
+
+		#sidebar header a:hover {
+			color: #fff;
+		}
+
+		#sidebar .nav {}
+
+		#sidebar .nav a {
+			background: none;
+			border-bottom: 1px solid #455A64;
+			color: #CFD8DC;
+			font-size: 14px;
+			padding: 16px 24px;
+		}
+
+		#sidebar .nav a:hover {
+			background: none;
+			color: #ECEFF1;
+			text-decoration: none !important;
+		}
+
+		#sidebar .nav a i {
+			margin-right: 16px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="viewport">
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<header>
+				<a href="/">My App</a>
+			</header>
+			<ul class="nav">
+				<li class="nav-item">
+					<a href="" id="profile-link">Your Profile</a>
+				</li>
+				<li class="nav-item">
+					<a href="" id="organizations-link">organizations</a>
+				</li>
+				<li class="nav-item">
+					<a href="/" id="logout">Logout</a>
+				</li>
+			</ul>
+		</div>
+		<!-- Content -->
+		<div id="content">
+			<!-- <nav class="navbar navbar-default">
+				<h3 class="text-info">Your Profile</h3>
+			</nav> -->
+			<div class="container-fluid">
+				<p>
+					<code>
+
+		<div class="container" id="organizations-container" style="display: none;">
+				<h3 class="text-info">Organizations</h3>
+			<table class="table table-bordered" id="organizations-list">
+				<thead>
+					<tr>
+						<th>organization Name</th>
+						<th>Age</th>
+						<th>State</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					</tr>
+				</tbody>
+			</table>
+							<!-- Button to Open the Modal -->
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+									Add
+								</button>
+								<div class="row mt-3"></div>
+								<div class="col-md-12"></div>
+		</div>
+			<div class="container" id="profile-container">
+					<h3 class="text-info">Your Profile</h3>
+					<form class="w-25">
+						<!-- <img alt="User Image" id="img"> -->
+						<input type="text" class="form-control m-2 plaintext" id="uname" placeholder="username" disabled>
+						<input type="text" class="form-control m-2 plaintext" id="firstName" placeholder="Firstname" disabled>
+						<input type="text" class="form-control m-2 plaintext" id="lastName" placeholder="LastName" disabled>
+						<input type="text" class="form-control m-2 plaintext" id="gender" placeholder="Gender" disabled>
+						<input class="form-group form-control m-2 plaintext" id="DOB" type="text" placeholder="DOB" disabled>
+						<div class="input-group form-group m-2">
+							<div class="input-group-prepend">
+								<label for="sonOfVal" id="sonOfOp" class="input-group-text">S/O</label>
+							</div>
+							<input type="text" class="form-control plaintext" id="sonOfVal" placeholder="" disabled>
+						</div>
+						<input type="text" class="form-control m-2 plaintext" id="addressLine1" placeholder="address Line 1"
+							disabled>
+						<input type="text" class="form-control m-2 plaintext" id="addressLine2" placeholder="address Line 2"
+							disabled>
+						<input type="text" class="form-control m-2 plaintext" id="state" placeholder="State" disabled>
+						<input type="text" class="form-control m-2 plaintext" id="pincode" placeholder="Pincode" disabled>
+						<!-- <a href="/" class="btn btn-primary m-2 btn-block">Home</a> -->
+					</form>
+				</div>
+					</code>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- The Modal -->
+	<div class="modal" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Add Organization</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>organization Name</th>
+								<th>Age</th>
+								<th>State</th>
+								<th>Submit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="container">
+										<form>
+											<div class="form-group">
+
+												<select class="form-control chooseCompany">
+													<option>Select</option>
+													<option>Insurance Portal</option>
+													<option>Car Rental Portal</option>
+													<option>Movie Ticket Portal</option>
+													<option>Travel Portal</option>
+												</select>
+											</div>
+										</form>
+									</div>
+								</td>
+								<td>
+									<input type="checkbox" class="age-permission">
+								</td>
+								<td>
+									<input type="checkbox" class="state-permission">
+								</td>
+								<td>
+									<button class="btn btn-primary btn-sm save-organization">Save</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- The Modal -->
+	<div class="modal" id="edit-organization-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- Modal Header -->
+				<div class="modal-header">
+					<h4 class="modal-title">Organization</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body">
+
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>organization Name</th>
+								<th>Age</th>
+								<th>State</th>
+								<th>Submit</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="container">
+										<form>
+											<div class="form-group">
+												<input type="text" class="chooseCompany form-control">
+											</div>
+										</form>
+									</div>
+								</td>
+								<td>
+									<input type="checkbox" class="age-permission">
+								</td>
+								<td>
+									<input type="checkbox" class="state-permission">
+								</td>
+								<td>
+									<button class="btn btn-primary btn-sm edit-save-organization">Save</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/profile.js"></script>
+	<script src="js/dashboard.js"></script>
+</body>
+
+</html>

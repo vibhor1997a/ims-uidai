@@ -17,12 +17,13 @@ export async function checkAdultHandler(req: Request, res: Response, next: NextF
         if (!dataStr) {
             return res.send(new APISuccessResponse({
                 isAdult: false
-            }))
+            }));
         }
         const data = JSON.parse(dataStr);
         const dob = data.DOB;
         const m1 = moment(dob, 'YYYY-MM-DD');
         const years = moment().diff(m1, 'years');
+                
         return res.send(new APISuccessResponse({
             isAdult: years > 18
         }));
